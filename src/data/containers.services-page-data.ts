@@ -4,8 +4,6 @@ import {
   BadgeCheck,
   BarChart3,
   Briefcase,
-  Building2,
-  Calendar,
   CheckCircle,
   CheckCircle2,
   ClipboardCheck,
@@ -17,7 +15,9 @@ import {
   FileSpreadsheet,
   FileText,
   Globe,
+  Handshake,
   Layers,
+  Link2,
   Mail,
   MapPin,
   Monitor,
@@ -25,10 +25,12 @@ import {
   PhoneCall,
   PiggyBank,
   RefreshCcw,
+  RefreshCw,
   Search,
   Send,
   Settings,
   Share2,
+  Shield,
   ShieldCheck,
   Sliders,
   Star,
@@ -49,21 +51,21 @@ export const ServicesDetailTabSectionData = [
     link: "/services/medical-billing-coding",
   },
 
-  {
-    id: "drug-rehab",
-    title: "Drug & Rehabilitation Billing",
-    description:
-      "Specialized billing solutions tailored for rehabilitation centers, behavioral health facilities, and addiction treatment providers. Our team ensures compliance with payer requirements while maximizing reimbursement rates.",
-    link: "/services/drug-rehabilitation-billing",
-  },
+  // {
+  //   id: "drug-rehab",
+  //   title: "Drug & Rehabilitation Billing",
+  //   description:
+  //     "Specialized billing solutions tailored for rehabilitation centers, behavioral health facilities, and addiction treatment providers. Our team ensures compliance with payer requirements while maximizing reimbursement rates.",
+  //   link: "/services/drug-rehabilitation-billing",
+  // },
 
-  {
-    id: "medical-scribing",
-    title: "Medical Scribing",
-    description:
-      "Eliminate documentation stress with our professional scribing services. We capture patient encounters in real time, giving providers more time to focus on delivering quality care.",
-    link: "/services/medical-scribbing",
-  },
+  // {
+  //   id: "medical-scribing",
+  //   title: "Medical Scribing",
+  //   description:
+  //     "Eliminate documentation stress with our professional scribing services. We capture patient encounters in real time, giving providers more time to focus on delivering quality care.",
+  //   link: "/services/medical-scribbing",
+  // },
 
   {
     id: "credentialing",
@@ -97,13 +99,13 @@ export const ServicesDetailTabSectionData = [
     link: "/services/virtual-assistant",
   },
 
-  {
-    id: "digital-marketing",
-    title: "Digital Marketing for Healthcare",
-    description:
-      "Grow your practice's online presence with our healthcare-focused digital marketing solutions, including SEO, PPC campaigns, and social media management. We help you reach more patients and build brand authority.",
-    link: "/services/digital-marketing",
-  },
+  // {
+  //   id: "digital-marketing",
+  //   title: "Digital Marketing for Healthcare",
+  //   description:
+  //     "Grow your practice's online presence with our healthcare-focused digital marketing solutions, including SEO, PPC campaigns, and social media management. We help you reach more patients and build brand authority.",
+  //   link: "/services/digital-marketing",
+  // },
 ];
 
 export const ServicesWhyChooseUsSectionData = [
@@ -188,29 +190,34 @@ export const CredentialingServiceIncludeSectionData = [
     icon: ClipboardCheck,
   },
   {
+    title: "Insurance Linkage",
+    description:
+      "Connecting providers with insurance networks to ensure timely reimbursements and smooth payer communication.",
+    icon: Link2,
+  },
+  {
     title: "Re-Credentialing",
-    description: "Stay updated and avoid interruptions in reimbursements.",
+    description:
+      "Stay updated and avoid interruptions in reimbursements through proactive re-credentialing management.",
     icon: RefreshCcw,
   },
   {
+    title: "Re-Negotiations",
+    description:
+      "Handling payer contract re-negotiations to improve reimbursement rates and optimize revenue potential.",
+    icon: Handshake,
+  },
+  {
     title: "CAQH Profile Management",
-    description: "Complete setup, updates, and attestation for providers.",
+    description:
+      "Complete setup, updates, and attestation for providers, ensuring compliance and data accuracy across networks.",
     icon: FileText,
   },
   {
-    title: "Insurance Panel Applications",
-    description: "Apply and gain approval across multiple networks.",
-    icon: Building2,
-  },
-  {
     title: "State Licensing Assistance",
-    description: "Support with new applications and renewals.",
+    description:
+      "Comprehensive support with new applications, renewals, and regulatory compliance for state medical licenses.",
     icon: BadgeCheck,
-  },
-  {
-    title: "Ongoing Credentialing Maintenance",
-    description: "Ensure compliance and avoid claim denials.",
-    icon: ShieldCheck,
   },
 ];
 
@@ -300,39 +307,45 @@ export const DrugRehabilitationBillingServiceIncludeSectionData = [
 
 export const MedicalBillingCodingServiceIncludeSectionData = [
   {
-    title: "Accurate Coding (CPT, ICD-10, HCPCS)",
+    title: "End-to-End Medical Billing & Coding",
     description:
-      "Our certified coders ensure every claim is coded correctly to minimize errors and maximize reimbursements.",
-    icon: FileCode,
+      "Comprehensive billing and coding solutions that streamline revenue cycle management from charge entry to payment posting.",
+    icon: FileText,
   },
   {
-    title: "Claims Submission & Tracking",
+    title: "Verification Of Benefits",
     description:
-      "Fast and efficient submission with active follow-up to prevent delays.",
+      "Accurate eligibility and benefits verification to ensure clean claims and minimize payment delays.",
+    icon: CheckCircle,
+  },
+  {
+    title: "Claim Submission & Tracking",
+    description:
+      "Fast, compliant electronic claim submission with real-time status tracking for improved reimbursement efficiency.",
     icon: Send,
   },
   {
     title: "Denial Management",
     description:
-      "Proactive identification, correction, and resubmission of denied claims.",
-    icon: XCircle,
+      "Systematic review and resolution of denied claims to recover lost revenue and prevent recurring issues.",
+    icon: RefreshCw,
   },
   {
-    title: "Patient Billing & Collections",
+    title: "Account Receivables",
     description:
-      "Transparent, patient-friendly billing solutions to improve collections and satisfaction.",
-    icon: Users,
+      "Proactive follow-ups and AR optimization strategies to accelerate collections and maintain healthy cash flow.",
+    icon: DollarSign,
   },
   {
-    title: "Revenue Cycle Management (RCM)",
+    title: "Financial Reporting",
     description:
-      "Comprehensive oversight from claim creation to final payment.",
+      "Insightful, data-driven financial reports that give you a clear view of performance, trends, and opportunities.",
     icon: BarChart3,
   },
   {
-    title: "HIPAA-Compliant Practices",
+    title: "HIPAA-Compliant Protection",
     description:
-      "We protect patient data with strict adherence to HIPAA regulations.",
+      "We protect patient data with strict adherence to HIPAA and industry-standard security protocols.",
     icon: ShieldCheck,
   },
 ];
@@ -378,40 +391,28 @@ export const MedicalScribbingServiceIncludeSectionData = [
 
 export const VirtualAssistanceServiceIncludeSectionData = [
   {
-    title: "Administrative Support",
+    title: "Patient Scheduling & Administrative Support",
     description:
-      "Managing emails, phone calls, scheduling, and patient communication.",
+      "Managing appointments, reminders, and front-office coordination to improve patient experience and reduce administrative load.",
     icon: PhoneCall,
-  },
-  {
-    title: "Billing & Claims Support",
-    description:
-      "Assisting with claim submissions, follow-ups, and insurance verifications.",
-    icon: ClipboardList,
   },
   {
     title: "Medical Transcription & Documentation",
     description:
-      "Accurately recording patient encounters and updating EMR/EHR systems.",
+      "Accurately recording patient encounters and updating EMR/EHR systems with structured, compliant data.",
     icon: FileText,
   },
   {
-    title: "Patient Follow-Up & Reminders",
+    title: "Insurance Verification & Eligibility Checks",
     description:
-      "Appointment confirmations, payment reminders, and post-care follow-ups.",
-    icon: Calendar,
+      "Performing real-time insurance verification and eligibility confirmation to prevent claim rejections and delays.",
+    icon: Shield,
   },
   {
-    title: "Data Entry & Reporting",
+    title: "Virtual Scribing Services",
     description:
-      "Organizing records, preparing reports, and managing healthcare databases.",
-    icon: BarChart3,
-  },
-  {
-    title: "24/7 Support Availability",
-    description:
-      "Flexible assistance to fit your practice hours and patient needs.",
-    icon: Clock,
+      "Providing real-time virtual scribing support to capture clinical notes, streamline workflows, and let providers focus on care.",
+    icon: ClipboardList,
   },
 ];
 

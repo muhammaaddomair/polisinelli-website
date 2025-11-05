@@ -40,13 +40,13 @@ export const FooterServicesLink = [
     link: "/services/medical-billing-coding",
   },
 
-  {
-    name: "Drug & Rehabilitation Billing",
-    link: "/services/drug-rehabilitation-billing",
-  },
+  // {
+  //   name: "Drug & Rehabilitation Billing",
+  //   link: "/services/drug-rehabilitation-billing",
+  // },
 
   {
-    name: "Credentialing",
+    name: "Credentialing Services",
     link: "/services/credentialing",
   },
 
@@ -62,7 +62,7 @@ export const FooterServicesLink = [
     link: "/services/virtual-assistant",
   },
 
-  { name: "Medical Scribing", link: "/services/medical-scribbing" },
+  // { name: "Medical Scribing", link: "/services/medical-scribbing" },
 
-  { name: "Digital Marketing", link: "/services/digital-marketing" },
+  // { name: "Digital Marketing", link: "/services/digital-marketing" },
 ];

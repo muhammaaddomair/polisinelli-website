@@ -33,18 +33,13 @@ function Footer() {
               <Image
                 src={Logo}
                 alt="Solux Global"
-                width={90}
-                className="h-auto max-md:w-[70px]"
+                width={70}
+                className="h-auto"
                 priority
               />
-              <div>
-                <h1 className="leading-none lg:text-xl md:text-lg text-base font-extrabold font-dm_sans text-primary-foreground">
-                  Solux Global
-                </h1>
-                <p className="text-white/70 font-medium text-xs">
-                  Medical Billing Company USA
-                </p>
-              </div>
+              <h1 className="leading-none lg:text-xl md:text-lg text-base font-semibold font-dm_sans text-primary-foreground">
+                Solux Global
+              </h1>
             </Link>
 
             <p className="text-white/70 text-sm md:text-base leading-relaxed">

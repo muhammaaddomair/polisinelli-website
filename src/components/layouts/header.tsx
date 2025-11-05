@@ -41,18 +41,13 @@ export default function Header() {
           <Image
             src={Logo}
             alt="Solux Global"
-            width={90}
-            className="h-auto max-md:w-[70px]"
+            width={60}
+            className="h-auto"
             priority
           />
-          <div>
-            <h1 className="leading-none lg:text-xl md:text-lg text-base font-extrabold font-dm_sans text-primary">
-              Solux Global
-            </h1>
-            <p className="text-heading font-medium text-xs">
-              Medical Billing Company USA
-            </p>
-          </div>
+          <h1 className="leading-none lg:text-xl md:text-lg text-base font-semibold font-dm_sans text-heading">
+            Solux Global
+          </h1>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8 -translate-x-4">

@@ -9,13 +9,13 @@ import {
   Users2,
 } from "lucide-react";
 import HomeServicesSectionImg01 from "../../public/images/home-services-section-img-01.jpg";
-import HomeServicesSectionImg02 from "../../public/images/home-services-section-img-02.jpg";
-import HomeServicesSectionImg03 from "../../public/images/home-services-section-img-03.jpg";
+// import HomeServicesSectionImg02 from "../../public/images/home-services-section-img-02.jpg";
+// import HomeServicesSectionImg03 from "../../public/images/home-services-section-img-03.jpg";
 import HomeServicesSectionImg04 from "../../public/images/home-services-section-img-04.jpg";
 import HomeServicesSectionImg05 from "../../public/images/home-services-section-img-05.jpg";
 import HomeServicesSectionImg06 from "../../public/images/home-services-section-img-06.jpg";
 import HomeServicesSectionImg07 from "../../public/images/home-services-section-img-07.jpg";
-import HomeServicesSectionImg08 from "../../public/images/home-services-section-img-08.jpg";
+// import HomeServicesSectionImg08 from "../../public/images/home-services-section-img-08.jpg";
 
 export const HomeWhyChooseUsSectionData = [
   {
@@ -62,23 +62,23 @@ export const HomeServicesSectionData = [
     link: "/services/medical-billing-coding",
   },
 
-  {
-    id: "drug-rehab",
-    title: "Drug & Rehabilitation Billing",
-    description:
-      "Specialized billing solutions tailored for rehabilitation centers, behavioral health facilities, and addiction treatment providers. Our team ensures compliance with payer requirements while maximizing reimbursement rates.",
-    image: HomeServicesSectionImg02,
-    link: "/services/drug-rehabilitation-billing",
-  },
+  // {
+  //   id: "drug-rehab",
+  //   title: "Drug & Rehabilitation Billing",
+  //   description:
+  //     "Specialized billing solutions tailored for rehabilitation centers, behavioral health facilities, and addiction treatment providers. Our team ensures compliance with payer requirements while maximizing reimbursement rates.",
+  //   image: HomeServicesSectionImg02,
+  //   link: "/services/drug-rehabilitation-billing",
+  // },
 
-  {
-    id: "medical-scribing",
-    title: "Medical Scribing",
-    description:
-      "Eliminate documentation stress with our professional scribing services. We capture patient encounters in real time, giving providers more time to focus on delivering quality care.",
-    image: HomeServicesSectionImg03,
-    link: "/services/medical-scribbing",
-  },
+  // {
+  //   id: "medical-scribing",
+  //   title: "Medical Scribing",
+  //   description:
+  //     "Eliminate documentation stress with our professional scribing services. We capture patient encounters in real time, giving providers more time to focus on delivering quality care.",
+  //   image: HomeServicesSectionImg03,
+  //   link: "/services/medical-scribbing",
+  // },
 
   {
     id: "credentialing",
@@ -116,14 +116,14 @@ export const HomeServicesSectionData = [
     link: "/services/virtual-assistant",
   },
 
-  {
-    id: "digital-marketing",
-    title: "Digital Marketing for Healthcare",
-    description:
-      "Grow your practice's online presence with our healthcare-focused digital marketing solutions, including SEO, PPC campaigns, and social media management. We help you reach more patients and build brand authority.",
-    image: HomeServicesSectionImg08,
-    link: "/services/digital-marketing",
-  },
+  // {
+  //   id: "digital-marketing",
+  //   title: "Digital Marketing for Healthcare",
+  //   description:
+  //     "Grow your practice's online presence with our healthcare-focused digital marketing solutions, including SEO, PPC campaigns, and social media management. We help you reach more patients and build brand authority.",
+  //   image: HomeServicesSectionImg08,
+  //   link: "/services/digital-marketing",
+  // },
 ];
 
 export const HomeFAQSectionData01 = [
