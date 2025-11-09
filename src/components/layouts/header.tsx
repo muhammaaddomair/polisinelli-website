@@ -45,7 +45,7 @@ export default function Header() {
             className="h-auto"
             priority
           />
-          <h1 className="leading-none lg:text-3xl md:text-lg text-base font-semibold font-dm_sans text-heading">
+          <h1 className="leading-none lg:text-2xl md:text-xl text-lg font-semibold font-dm_sans text-heading">
             Solux Global
           </h1>
         </Link>
