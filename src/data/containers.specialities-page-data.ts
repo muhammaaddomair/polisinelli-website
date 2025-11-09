@@ -5,7 +5,6 @@ import {
   Smile,
   Award,
   Brain,
-  Zap,
   Stethoscope,
   ZapOff,
   Zap as Lightning,

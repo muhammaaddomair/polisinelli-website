@@ -13,7 +13,7 @@ export const HeaderNavLinks = [
   },
   {
     title: "Specialities",
-    path: "/pricing",
+    path: "/specialities",
   },
   {
     title: "FAQ",
@@ -28,7 +28,7 @@ export const FooterNavLinks = [
   { label: "Contact", href: "/contact-us" },
   { label: "FAQs", href: "/faq" },
   { label: "Claim Free Audit", href: "/free-audit" },
-  { label: "Specialities", href: "/pricing" },
+  { label: "Specialities", href: "/specialities" },
   { label: "Blog", href: "/blogs" },
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Terms & Conditions", href: "/terms-conditions" },

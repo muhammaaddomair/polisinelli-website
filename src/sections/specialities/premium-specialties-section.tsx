@@ -3,9 +3,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import { OurSpecialtiesSectionData } from "@/data/containers.pricing-page-data";
+import { OurSpecialtiesSectionData } from "@/data/containers.specialities-page-data";
 
-function PremiumSpecialtiesCompact() {
+function PremiumSpecialtiesSection() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -32,7 +32,7 @@ function PremiumSpecialtiesCompact() {
           variants={itemVariants}
           className="text-4xl md:text-5xl lg:text-6xl font-dm_sans font-bold text-center mb-12 text-gray-900"
         >
-           <span className="text-blue-600">Specialties</span> We Serve
+          <span className="text-blue-600">Specialties</span> We Serve
         </motion.h2>
 
         <motion.div
@@ -41,7 +41,7 @@ function PremiumSpecialtiesCompact() {
         >
           {OurSpecialtiesSectionData.map((specialty, index) => {
             const Icon = specialty.icon;
-            const iconColor = specialty.color || "blue-600"; // default color
+            const iconColor = "blue-600"; 
             return (
               <motion.div
                 key={index}
@@ -78,4 +78,4 @@ function PremiumSpecialtiesCompact() {
   );
 }
 
-export default PremiumSpecialtiesCompact;
+export default PremiumSpecialtiesSection;
