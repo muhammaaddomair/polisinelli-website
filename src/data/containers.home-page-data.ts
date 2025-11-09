@@ -90,12 +90,12 @@ export const HomeServicesSectionData = [
   },
 
   {
-    id: "state-licensing",
-    title: "State Licensing Assistance",
+    id: "workers-compensation-lien-resolution",
+    title: "Workers Compensation and Lien Resolution",
     description:
-      "Expand your practice with confidence. We help healthcare providers meet state licensing requirements, keeping your operations fully compliant with regulatory standards.",
+      "Expand your workers’ compensation practice with confidence. We help healthcare providers stay compliant with state workers’ compensation regulations, ensuring every case meets required standards.",
     image: HomeServicesSectionImg05,
-    link: "/services/credentialing",
+    link: "/services/state-licensing",
   },
 
   {
