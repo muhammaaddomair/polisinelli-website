@@ -45,7 +45,7 @@ export default function Header() {
             className="h-auto"
             priority
           />
-          <h1 className="leading-none lg:text-xl md:text-lg text-base font-semibold font-dm_sans text-heading">
+          <h1 className="leading-none lg:text-3xl md:text-lg text-base font-semibold font-dm_sans text-heading">
             Solux Global
           </h1>
         </Link>
@@ -74,7 +74,7 @@ export default function Header() {
           </Button>
 
           <Button
-            onClick={() => NavigateTo("/free-audit")}
+            onClick={() => NavigateTo("/get-demo")}
             className="h-[45px] bg-black px-8 text-base font-dm_sans font-medium hover:bg-secondary rounded-full"
           >
             Get Demo

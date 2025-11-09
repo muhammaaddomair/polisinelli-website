@@ -1,76 +1,95 @@
-import { DollarSign, Scale, ShieldCheck, Users } from "lucide-react";
+import {
+  Users,
+  Heart,
+  Activity,
+  Smile,
+  Award,
+  Brain,
+  Zap,
+  Stethoscope,
+  ZapOff,
+  Zap as Lightning,
+} from "lucide-react";
 
-export const WhyChooseOurPricingSectionData = [
+export const OurSpecialtiesSectionData = [
   {
-    icon: DollarSign,
-    title: "Cost Efficiency",
+    icon: Users,
+    title: "Family Medicine",
     description:
-      "We offer competitive rates without compromising on service quality, ensuring affordability for every healthcare provider.",
+      "Comprehensive billing solutions tailored for family medicine practices, ensuring accurate claim submissions and timely reimbursements.",
     bgColor: "bg-blue-50",
     iconColor: "text-blue-600",
   },
   {
-    icon: Scale,
-    title: "Transparent Billing",
+    icon: Stethoscope, // replaced Foot
+    title: "Podiatry",
     description:
-      "No hidden fees or surprises—our clear and straightforward pricing keeps you fully informed and in control.",
+      "Streamlined billing and coding support specifically designed for podiatry services and procedures.",
     bgColor: "bg-green-50",
     iconColor: "text-green-600",
   },
   {
-    icon: Users,
-    title: "Customizable Plans",
+    icon: Brain,
+    title: "Mental Health",
     description:
-      "Choose from flexible plans designed to match your practice size, specialty, and specific operational needs.",
+      "Dedicated billing support for psychologists, therapists, and mental health providers, simplifying claims and reimbursements.",
     bgColor: "bg-purple-50",
     iconColor: "text-purple-600",
   },
   {
-    icon: ShieldCheck,
-    title: "Reliable Support",
+    icon: Award, // replaced Tooth
+    title: "Dentistry",
     description:
-      "Our dedicated team ensures smooth onboarding, quick responses, and ongoing assistance whenever you need it.",
+      "Accurate dental billing solutions covering all procedures, from routine checkups to specialized treatments.",
     bgColor: "bg-orange-50",
     iconColor: "text-orange-600",
   },
-];
-
-export const PricingSectionData = [
   {
-    name: "Starter Plan",
-    subtitle: "For Small Practices",
-    description: "Best for solo providers and small clinics.",
-    features: [
-      "End-to-End Medical Billing & Coding",
-      "Denial Management & AR Follow-Up",
-      "Credentialing Assistance",
-      "Patient Billing Support",
-      "Starting at 4% of Monthly Collections",
-    ],
-  },
-  {
-    name: "Professional Plan",
-    subtitle: "For Growing Practices",
+    icon: Lightning, // replaced Wheelchair
+    title: "DME (Durable Medical Equipment)",
     description:
-      "Ideal for mid-sized practices with expanding patient volumes.",
-    features: [
-      "All Starter Plan Features",
-      "Advanced Reporting & Analytics",
-      "Dedicated Account Manager",
-      "Compliance & Audit Support",
-      "Starting at 5% of Monthly Collections",
-    ],
+      "Complete billing and claims management for durable medical equipment providers, ensuring smooth reimbursements.",
+    bgColor: "bg-yellow-50",
+    iconColor: "text-yellow-600",
   },
   {
-    name: "Enterprise Plan",
-    subtitle: "For Large Practices & Facilities",
-    description: "Perfect for multi-specialty groups and hospitals.",
-    features: [
-      "All Professional Plan Features",
-      "Full Revenue Cycle Management (RCM)",
-      "Multi-Location Support",
-      "24/7 Virtual Assistant Support",
-      "Custom Quote Available Upon Request",
-    ],
+    icon: ZapOff, // replaced Handshake
+    title: "Physical Therapy",
+    description:
+      "Efficient billing for physical therapy practices, including therapy sessions, rehabilitation services, and follow-ups.",
+    bgColor: "bg-red-50",
+    iconColor: "text-red-600",
+  },
+  {
+    icon: Heart,
+    title: "Used Care",
+    description:
+      "Support for outpatient and urgent care billing, managing claims with accuracy and speed.",
+    bgColor: "bg-teal-50",
+    iconColor: "text-teal-600",
+  },
+  {
+    icon: Activity,
+    title: "Pain Management",
+    description:
+      "Specialized billing for pain management clinics, covering procedures, injections, and therapy sessions.",
+    bgColor: "bg-indigo-50",
+    iconColor: "text-indigo-600",
+  },
+  {
+    icon: Stethoscope, // replaced Spine
+    title: "Neurology",
+    description:
+      "Focused billing solutions for neurology practices, including diagnostics, consultations, and treatments.",
+    bgColor: "bg-pink-50",
+    iconColor: "text-pink-600",
+  },
+  {
+    icon: Smile,
+    title: "Pediatrics",
+    description:
+      "Reliable billing services for pediatricians, ensuring all patient claims are processed efficiently.",
+    bgColor: "bg-lime-50",
+    iconColor: "text-lime-600",
   },
 ];

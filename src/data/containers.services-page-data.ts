@@ -76,10 +76,10 @@ export const ServicesDetailTabSectionData = [
   },
 
   {
-    id: "state-licensing",
-    title: "State Licensing Assistance",
+    id: "Workers Compensation and Lien Resolution",
+    title: "Workers Compensation and Lien Resolution",
     description:
-      "Expand your practice with confidence. We help healthcare providers meet state licensing requirements, keeping your operations fully compliant with regulatory standards.",
+      "Expand your workers’ compensation practice with confidence. We help healthcare providers stay compliant with state workers’ compensation regulations, ensuring every case meets required documentation and reporting standards.",
     link: "/services/state-licensing",
   },
 
@@ -416,41 +416,41 @@ export const VirtualAssistanceServiceIncludeSectionData = [
   },
 ];
 
-export const StateLicensingServiceIncludeSectionData = [
+export const WorkersCompServiceIncludeSectionData = [
   {
-    title: "New License Applications",
+    title: "Claim Documentation",
     description:
-      "Complete support for physicians, NPs, PAs, and other healthcare providers applying for new state licenses.",
+      "Complete support in preparing and submitting workers’ compensation claims accurately and on time.",
     icon: FileText,
   },
   {
-    title: "License Renewals",
+    title: "Lien Resolution & Negotiation",
     description:
-      "Proactive renewal management to ensure licenses are updated on time and without any lapse in authorization.",
+      "Expert handling of medical and legal liens to ensure fair settlements and timely resolution.",
     icon: RefreshCcw,
   },
   {
-    title: "Multi-State Licensing",
+    title: "Multi-State Claims Support",
     description:
-      "Simplified process for providers expanding their practice across multiple states with efficient coordination and tracking.",
+      "Streamlined management for claims across multiple states, ensuring compliance and efficient processing.",
     icon: MapPin,
   },
   {
-    title: "Verification & Documentation",
+    title: "Verification & Compliance",
     description:
-      "Comprehensive assistance with education, employment, and background verification required for state licensing.",
+      "Assistance with claim verification, medical documentation, and adherence to regulatory requirements.",
     icon: ClipboardCheck,
   },
   {
-    title: "DEA Registration & Renewals",
+    title: "Benefit Coordination",
     description:
-      "End-to-end support for obtaining and renewing DEA registrations for controlled substance prescribing.",
+      "End-to-end support in coordinating benefits, reimbursements, and claim-related payments accurately.",
     icon: ShieldCheck,
   },
   {
-    title: "Compliance Monitoring",
+    title: "Ongoing Compliance Monitoring",
     description:
-      "Ongoing compliance tracking to ensure all licensing and regulatory requirements are met, avoiding penalties or delays.",
+      "Continuous tracking of workers’ compensation regulations to avoid penalties, delays, or rejected claims.",
     icon: CheckCircle,
   },
 ];
@@ -679,35 +679,35 @@ export const WhyChooseIndividualServiceSectionArDenialManagementData = [
   },
 ];
 
-export const WhyChooseIndividualServiceSectionStateLicensingData = [
+export const WhyChooseIndividualServiceSectionWorkersCompData = [
   {
     icon: Clock,
     title: "Time-Saving",
     description:
-      "We handle the complex paperwork and coordination so you can stay focused on patient care.",
+      "We handle complex claim documentation, lien negotiations, and administrative tasks so you can focus on your core operations.",
   },
   {
     icon: ShieldCheck,
     title: "Accuracy & Compliance",
     description:
-      "Our licensing experts ensure every application is error-free and fully compliant with all state regulations.",
+      "Our experts ensure every claim and lien is managed accurately and fully compliant with state and federal regulations.",
   },
   {
     icon: Zap,
-    title: "Faster Processing",
+    title: "Faster Resolutions",
     description:
-      "Accelerate approval timelines and minimize administrative bottlenecks with our streamlined approach.",
+      "Accelerate lien settlements and claim processing timelines with our efficient, streamlined approach.",
   },
   {
     icon: Briefcase,
-    title: "Multi-Specialty Support",
+    title: "Multi-State Support",
     description:
-      "Comprehensive licensing support for physicians, behavioral health providers, therapists, and other specialists.",
+      "Comprehensive support for workers’ compensation claims and lien resolutions across multiple states.",
   },
   {
     icon: Users,
     title: "Dedicated Specialists",
     description:
-      "Receive personalized, end-to-end guidance from our team of experienced licensing professionals.",
+      "Receive personalized, end-to-end guidance from our team of experienced workers’ comp and lien resolution professionals.",
   },
 ];

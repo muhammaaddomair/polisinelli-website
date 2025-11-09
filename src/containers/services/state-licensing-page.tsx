@@ -3,8 +3,9 @@ import React from "react";
 import FreeAuditFormSection from "@/sections/audit/free-audit-form-section";
 
 import {
-  StateLicensingServiceIncludeSectionData,
-  WhyChooseIndividualServiceSectionStateLicensingData,
+  
+  WhyChooseIndividualServiceSectionWorkersCompData,
+  WorkersCompServiceIncludeSectionData,
 } from "@/data/containers.services-page-data";
 
 import CTASection from "@/components/partials/cta-section";
@@ -18,21 +19,21 @@ function StateLicensingPage() {
   return (
     <main>
       <PagesHeroSection
-        title="Seamless State Licensing Solutions for"
-        highlightText="Healthcare Providers"
-        description="Navigating the complexities of state medical licensing can be overwhelming and time-consuming for healthcare providers. At Solux Global, we simplify the process by managing your initial applications, renewals, verifications, and compliance requirements—ensuring you stay licensed and ready to practice without disruptions."
+        title="Comprehensive Workers’ Compensation &"
+        highlightText="Lien Resolution Services"
+        description="Managing workers’ compensation claims and medical lien resolutions can be complex and time-consuming. At Solux Global, we streamline the process by handling claim documentation, lien negotiations, compliance verification, and end-to-end resolution—ensuring your reimbursements are accurate, timely, and fully compliant with state and federal requirements."
       />
       <ServiceIncludesSection
         firstHalfHeading="Our"
-        highlightedHeading="State Licensing Service"
-        remaningHeading="Include"
-        data={StateLicensingServiceIncludeSectionData}
+        highlightedHeading="Workers’ Compensation & Lien Resolution"
+        remaningHeading="Services Include"
+        data={WorkersCompServiceIncludeSectionData}
       />
       <FreeAuditFormSection />
       <WhyChooseIndividualServiceSection
         firstHalfHeading="Why"
-        highlightedHeading="State Licensing Service"
-        data={WhyChooseIndividualServiceSectionStateLicensingData}
+        highlightedHeading="Workers’ Compensation & Lien Resolution"
+        data={WhyChooseIndividualServiceSectionWorkersCompData}
         serviceImage={StateLicensingServiceWhyChooseUsSectionImg}
       />
       <CTASection />

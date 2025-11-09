@@ -43,8 +43,8 @@ function Footer() {
             </Link>
 
             <p className="text-white/70 text-sm md:text-base leading-relaxed">
-              IT Solutions and Managed Services Provider specializing in
-              developing custom solutions for healthcare.
+              Simplifying medical billing for doctors with accurate, timely, and
+              compliant solutions.
             </p>
 
             <div className="space-y-3 mt-2">
@@ -155,11 +155,8 @@ function Footer() {
 
             <div className="space-y-8">
               <div className="space-y-2">
-                <h4 className="text-secondary font-semibold mb-2 underline underline-offset-4">
-                  USA
-                </h4>
                 <p className="text-white/70 text-sm md:text-base leading-relaxed">
-                  30 N Gould St Ste R Sheridan <br /> WY 82801
+                  30 N Gould St Ste R, Sheridan <br /> WY 82801
                 </p>
               </div>
             </div>

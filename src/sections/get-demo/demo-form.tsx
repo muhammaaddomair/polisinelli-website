@@ -8,12 +8,11 @@ import { Button } from "@/components/ui/button";
 
 import ContactUsFormSectionImg from "../../../public/images/contact-us-form-section-img.png";
 
-function ContactUsFormSection() {
+function GetDemoFormSection() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    practice: "",
     speciality: "",
     message: "",
   });
@@ -32,15 +31,14 @@ function ContactUsFormSection() {
       name: "",
       email: "",
       phone: "",
-      practice: "",
       speciality: "",
       message: "",
     });
   };
 
   return (
-    <section className="bg-black section-padding-standard">
-      <div className="layout-standard section-padding-standard grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <section className="bg-black section-padding-standard min-h-[60vh] flex items-center">
+      <div className="layout-standard grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full">
         <motion.div
           className="bg-white md:p-8 max-md:py-8 max-md:px-4 rounded-lg border border-border shadow-md lg:max-w-[500px] mx-auto text-center"
           initial={{ opacity: 0, x: -50 }}
@@ -87,15 +85,7 @@ function ContactUsFormSection() {
               placeholder="Enter your phone number"
               className="w-full h-[50px] px-4 bg-transparent border border-border rounded-lg text-heading placeholder-muted-foreground focus:outline-none focus:border-ring transition-colors md:text-base text-sm"
             />
-            <input
-              type="text"
-              name="practice"
-              value={formData.practice}
-              onChange={handleChange}
-              placeholder="Enter your practice name"
-              className="w-full h-[50px] px-4 bg-transparent border border-border rounded-lg text-heading placeholder-muted-foreground focus:outline-none focus:border-ring transition-colors md:text-base text-sm"
-            />
-            {/* New input field for Doctor Speciality */}
+            {/* Doctor Speciality */}
             <input
               type="text"
               name="speciality"
@@ -128,7 +118,7 @@ function ContactUsFormSection() {
         >
           <Image
             src={ContactUsFormSectionImg}
-            alt="Contact Us Form"
+            alt="Get Demo Form"
             className="rounded-xl w-[80%] lg:w-[85%] h-[70%] object-contain"
           />
         </motion.div>
@@ -137,4 +127,4 @@ function ContactUsFormSection() {
   );
 }
 
-export default ContactUsFormSection;
+export default GetDemoFormSection;

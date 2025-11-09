@@ -3,26 +3,26 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import { WhyChooseOurPricingSectionData } from "@/data/containers.pricing-page-data";
+import { OurSpecialtiesSectionData } from "@/data/containers.pricing-page-data";
 
-function WhyChooseOurPricingSection() {
+function PremiumSpecialtiesCompact() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.3 },
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
     },
   };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.6 } },
   };
 
   return (
-    <section className="bg-background section-padding-standard max-md:pt-4">
+    <section className="bg-white section-padding-standard">
       <motion.div
-        className="layout-standard section-padding-standard"
+        className="layout-standard"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -30,33 +30,45 @@ function WhyChooseOurPricingSection() {
       >
         <motion.h2
           variants={itemVariants}
-          className="lg:text-6xl md:text-4xl text-3xl font-dm_sans font-semibold text-center lg:mb-10 md:mb-8 mb-6"
+          className="text-4xl md:text-5xl lg:text-6xl font-dm_sans font-bold text-center mb-12 text-gray-900"
         >
-          Why Choose Our <span className="text-secondary">Pricing</span>
+           <span className="text-blue-600">Specialties</span> We Serve
         </motion.h2>
 
         <motion.div
           variants={containerVariants}
-          className="lg:flex lg:justify-between md:gap-4 gap-6 grid md:grid-cols-2 grid-cols-1"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          {WhyChooseOurPricingSectionData.map((value, index) => {
-            const IconComponent = value.icon;
-
+          {OurSpecialtiesSectionData.map((specialty, index) => {
+            const Icon = specialty.icon;
+            const iconColor = specialty.color || "blue-600"; // default color
             return (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className={`${value.bgColor} col-span-1 flex flex-col items-center justify-start lg:w-full rounded-2xl p-8 border text-center hover:shadow-lg transition-shadow duration-300`}
+                className="relative group cursor-pointer overflow-hidden rounded-2xl border border-gray-300 shadow-lg"
               >
-                <div className="flex justify-center mb-6">
-                  <IconComponent className={`w-14 h-14 ${value.iconColor}`} />
+                {/* Background transition */}
+                <div className="absolute inset-0 bg-white/10 backdrop-blur-lg transition-all duration-700 z-0"></div>
+                <div className="absolute inset-0 before:absolute before:top-0 before:right-0 before:h-full before:w-0 before:bg-blue-500 before:transition-[width] before:duration-700 z-10 group-hover:before:w-full"></div>
+
+                {/* Card content */}
+                <div className="relative flex flex-col items-center justify-center h-48 p-4 z-20">
+                  {/* Front content: icon + title */}
+                  <div className="flex flex-col items-center justify-center transition-opacity duration-500 group-hover:opacity-0">
+                    <Icon className={`w-12 h-12 mb-2 text-${iconColor}`} />
+                    <h3 className="text-lg font-semibold text-gray-900 text-center">
+                      {specialty.title}
+                    </h3>
+                  </div>
+
+                  {/* Back content: description */}
+                  <div className="absolute inset-0 flex items-center justify-center p-4 opacity-0 transition-opacity duration-700 group-hover:opacity-100">
+                    <p className="text-white text-center text-base md:text-lg font-medium">
+                      {specialty.description}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="md:text-xl text-lg font-bold text-heading mb-3">
-                  {value.title}
-                </h3>
-                <p className="leading-relaxed md:text-base text-sm">
-                  {value.description}
-                </p>
               </motion.div>
             );
           })}
@@ -66,4 +78,4 @@ function WhyChooseOurPricingSection() {
   );
 }
 
-export default WhyChooseOurPricingSection;
+export default PremiumSpecialtiesCompact;

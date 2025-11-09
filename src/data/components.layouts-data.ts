@@ -12,7 +12,7 @@ export const HeaderNavLinks = [
     path: "/blogs",
   },
   {
-    title: "Pricing",
+    title: "Specialities",
     path: "/pricing",
   },
   {
@@ -28,10 +28,10 @@ export const FooterNavLinks = [
   { label: "Contact", href: "/contact-us" },
   { label: "FAQs", href: "/faq" },
   { label: "Claim Free Audit", href: "/free-audit" },
-  { label: "Pricing", href: "/pricing" },
+  { label: "Specialities", href: "/pricing" },
   { label: "Blog", href: "/blogs" },
   { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Terms & Conditions", href: "/terms-page" },
+  { label: "Terms & Conditions", href: "/terms-conditions" },
 ];
 
 export const FooterServicesLink = [
@@ -51,7 +51,7 @@ export const FooterServicesLink = [
   },
 
   {
-    name: "State Licensing",
+    name: "Workers Compensation & Lien Resolution",
     link: "/services/state-licensing",
   },
 
