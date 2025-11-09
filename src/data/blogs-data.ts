@@ -4,7 +4,7 @@ import Blog03PostImg from "../../public/images/blogs/blog-03-post-img.jpg";
 import Blog04PostImg from "../../public/images/blogs/blog-04-post-img.jpg";
 import Blog05PostImg from "../../public/images/blogs/blog-05-post-img.png";
 
-export const QucikPreviewBlogsData = [
+export const QucikPreviewBlogsData = [ 
   {
     slug: "5-common-medical-billing-mistakes",
     title: "5 Common Medical Billing Mistakes & How to Avoid Them",
