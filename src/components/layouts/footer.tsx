@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import {
+  MapPin,
   Phone,
   Mail,
   Linkedin,
@@ -154,7 +155,8 @@ function Footer() {
             </h3>
 
             <div className="space-y-8">
-              <div className="space-y-2">
+              <div className="flex items-start gap-2">
+                <MapPin className="w-5 h-5 text-blue-500 mt-0.5" />
                 <p className="text-white/70 text-sm md:text-base leading-relaxed">
                   30 N Gould St Ste R, Sheridan <br /> WY 82801
                 </p>
