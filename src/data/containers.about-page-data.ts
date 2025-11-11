@@ -19,7 +19,8 @@ export const OriginSectionData = [
     image: OriginSectionImg01,
     title: "Our Mission",
     content:
-      "Our mission as a provider of IT services is to give our customers solutions that help them meet their business objectives in innovative and effective ways. Maintaining the highest levels of professionalism and honesty while using the most up-to-date tools and methods is a big part of our goal to provide top-notch service.",
+      "To simplify the business side of healthcare through precision, transparency, and care. From full-cycle billing to virtual support and lien collections. We make every part of the revenue process smoother, faster, and smarter."
+
   },
   {
     id: "vision",
@@ -27,7 +28,7 @@ export const OriginSectionData = [
     image: OriginSectionImg02,
     title: "Our Vision",
     content:
-      "We envision a future where technology empowers every business to reach its full potential. Our goal is to be a trusted global partner, delivering cutting-edge digital solutions that transform the way companies operate and grow.",
+      "To create a healthcare ecosystem where providers focus on patients, not paperwork. We aim to be the most trusted partner for clinics seeking clarity, efficiency, and accountability in every stage of revenue management."
   },
   {
     id: "story",
@@ -35,7 +36,7 @@ export const OriginSectionData = [
     image: OriginSectionImg03,
     title: "Our Story",
     content:
-      "Founded with a passion for innovation, we’ve grown from a small startup into a leading IT solutions provider. Our story is driven by a relentless commitment to client success and continuous improvement.",
+      "We started with a simple idea: that healthcare providers deserve better support. Too many clinics were losing time, sleep, and revenue to systems that didn’t care. So we built something different, a team that listens, explains, and delivers.Today, we manage complete revenue cycles, provide skilled virtual assistants, and recover what’s owed through expert lien collections, all with one promise: to treat your practice like our own."
   },
 ];
 
