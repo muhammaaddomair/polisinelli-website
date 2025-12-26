@@ -1,142 +1,155 @@
 "use client";
 
-import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-
-import { HeaderNavLinks } from "@/data/components.layouts-data";
-
-import { Button } from "@/components/ui/button";
-import { Separator } from "../ui/separator";
-
-import { cn } from "@/lib/utils";
-
-import Logo from "../../../public/favicons/logo.png";
-import { Menu, X } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { Search, ChevronDown, ChevronUp } from "lucide-react";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [insightsOpen, setInsightsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const Pathname = usePathname();
-  const router = useRouter();
+  // Close dropdown on outside click
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node)
+      ) {
+        setOpen(false);
+        setInsightsOpen(false);
+      }
+    }
 
-  const NavigateTo = (path: string) => {
-    router.push(path);
-  };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
-    <header
-      className={
-        "bg-background border-b border-border shadow-sm sticky top-0 left-0 z-50 w-full transition-all duration-300 h-[100px]"
-      }
-    >
-      <div className="layout-standard h-full flex items-center justify-between">
-        <Link
-          href="/"
-          aria-label="Solux Global"
-          className="flex items-center gap-2"
-        >
-          <Image
-            src={Logo}
-            alt="Solux Global"
-            width={60}
-            className="h-auto"
-            priority
-          />
-          <h1 className="leading-none lg:text-2xl md:text-xl text-lg font-semibold font-dm_sans text-heading">
-            Solux Global
-          </h1>
-        </Link>
+    <header className="fixed top-0 left-0 w-full bg-white z-50 shadow-sm">
+      <div className="mx-auto px-[100px]">
+        <div className="flex h-[100px] items-center justify-between">
+          {/* LEFT — LOGO */}
+          <Link href="/" className="flex items-center">
+            <img
+              src="/favicons/logo-polsinelli.svg"
+              alt="Polsinelli"
+              className="h-[56px] w-auto"
+            />
+          </Link>
 
-        <nav className="hidden lg:flex items-center gap-8 -translate-x-4">
-          {HeaderNavLinks.map((data, index) => (
-            <Link
-              key={index}
-              href={data.path}
-              className={cn(
-                Pathname === data.path ? "text-primary" : "text-heading",
-                "text-base uppercase font-semibold font-dm_sans transition-colors duration-300  hover:text-primary-hover"
-              )}
+          {/* RIGHT SIDE */}
+          <div className="flex h-full flex-col justify-between py-3">
+            {/* UTILITY MENU */}
+            <nav
+              aria-label="Utility Menu"
+              className="flex justify-end gap-8 text-[13px] font-medium uppercase tracking-[0.15em] text-[#323E48]"
             >
-              {data.title}
-            </Link>
-          ))}
-        </nav>
+              <button className="hover:text-[#B2292E] transition-colors">
+                CONTACT US
+              </button>
+              <button className="hover:text-[#B2292E] transition-colors">
+                CLIENT LOGIN
+              </button>
+              <button className="flex items-center gap-2 hover:text-[#B2292E] transition-colors">
+                SEARCH <Search size={16} />
+              </button>
+            </nav>
 
-        <div className="hidden lg:flex items-center gap-2">
-          <Button
-            onClick={() => NavigateTo("/contact-us")}
-            className="h-[45px] px-8 text-base font-dm_sans font-medium hover:bg-primary-hover rounded-full"
-          >
-            Contact Us
-          </Button>
+            {/* MAIN NAV */}
+            <nav
+              aria-label="Header Menu"
+              className="relative flex justify-end gap-12 text-[24px] font-normal text-[#323E48]"
+            >
+              <Link
+                href="/people"
+                className="hover:text-[#B2292E] transition-colors"
+              >
+                Our People
+              </Link>
 
-          <Button
-            onClick={() => NavigateTo("/get-demo")}
-            className="h-[45px] bg-black px-8 text-base font-dm_sans font-medium hover:bg-secondary rounded-full"
-          >
-            Get Demo
-          </Button>
-        </div>
+              <Link
+                href="/capabilities"
+                className="hover:text-[#B2292E] transition-colors"
+              >
+                Our Capabilities
+              </Link>
 
-        <span
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
-          className="text-heading lg:hidden"
-        >
-          {isMenuOpen ? <X size={26} /> : <Menu size={26} />}
-        </span>
-      </div>
-
-      {/* === MOBILE DROPDOWN === */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            key="mobile-menu"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
-            className="lg:hidden bg-secondary-background border-t border-border text-heading"
-          >
-            <nav className="layout-standard flex flex-col gap-4 py-8">
-              {HeaderNavLinks.map((data, index) => (
-                <div key={index} className="flex flex-col gap-2">
-                  <Link
-                    href={data.path}
-                    onClick={() => setIsMenuOpen(false)}
-                    className={cn(
-                      Pathname === data.path ? "text-primary" : "text-heading",
-                      "text-sm font-medium"
-                    )}
-                  >
-                    {data.title}
-                  </Link>
-                  <Separator />
-                </div>
-              ))}
-
-              <div className="mt-4 flex items-center gap-2 max-md:flex-col">
-                <Button
-                  onClick={() => NavigateTo("/contact-us")}
-                  className="h-[45px] max-md:w-full md:px-8 text-sm font-dm_sans font-medium rounded-full"
+              {/* OUR FIRM DROPDOWN */}
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setOpen((prev) => !prev)}
+                  className="flex items-center gap-2 hover:text-[#B2292E] transition-colors"
                 >
-                  Contact Us
-                </Button>
+                  Our Firm
+                  {open ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                </button>
 
-                <Button
-                  onClick={() => NavigateTo("/free-audit")}
-                  className="h-[45px] bg-black max-md:w-full md:px-8 text-sm font-dm_sans font-medium rounded-full"
-                >
-                  Get Demo
-                </Button>
+                {/* DROPDOWN */}
+                {open && (
+                  <div className="fixed right-0 top-[100px] w-[320px] border border-[#D1D5DB] bg-white shadow-lg z-[100]">
+                    <ul className="text-[18px] text-[#323E48]">
+                      <DropdownItem label="About Us" />
+                      <DropdownItem label="Alumni Network" />
+                      <DropdownItem label="Careers" />
+
+                      {/* INSIGHTS */}
+                      <li className="border-t border-[#E5E7EB]">
+                        <button
+                          onClick={() => setInsightsOpen((prev) => !prev)}
+                          className={`flex w-full items-center justify-between px-6 py-4 transition-colors ${
+                            insightsOpen
+                              ? "bg-[#B2292E] text-white"
+                              : "hover:bg-[#B2292E] hover:text-white"
+                          }`}
+                        >
+                          <span>Insights</span>
+                          {insightsOpen ? (
+                            <ChevronUp size={16} />
+                          ) : (
+                            <ChevronDown size={16} />
+                          )}
+                        </button>
+
+                        {insightsOpen && (
+                          <ul className="bg-[#B2292E] text-white">
+                            {[
+                              "News",
+                              "Events",
+                              "Publications",
+                              "Blogs & Podcasts",
+                            ].map((item) => (
+                              <li
+                                key={item}
+                                className="border-t border-[#8B1F23] px-6 py-4 hover:bg-[#8B1F23] cursor-pointer transition-colors"
+                              >
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+
+                      <DropdownItem label="Offices & Locations" />
+                      <DropdownItem label="Our Diverse Culture" />
+                    </ul>
+                  </div>
+                )}
               </div>
             </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </div>
+      </div>
     </header>
+  );
+}
+
+/* ---------------- Dropdown Item ---------------- */
+
+function DropdownItem({ label }: { label: string }) {
+  return (
+    <li className="flex items-center justify-between border-t border-[#E5E7EB] px-6 py-4 cursor-pointer transition-colors hover:bg-[#B2292E] hover:text-white">
+      <span>{label}</span>
+    </li>
   );
 }

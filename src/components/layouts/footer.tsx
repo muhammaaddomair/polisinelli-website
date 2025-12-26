@@ -1,178 +1,89 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import { Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
 
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-  ArrowRight,
-} from "lucide-react";
-import Logo from "../../../public/favicons/logo.png";
-import {
-  FooterNavLinks,
-  FooterServicesLink,
-} from "@/data/components.layouts-data";
-
-function Footer() {
+export default function Footer() {
   return (
-    <footer className="bg-black text-primary-foreground">
-      <div className="layout-standard pt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8 mb-12">
-          <div className="flex flex-col gap-4">
-            <Link
-              href="/"
-              aria-label="Solux Global"
-              className="flex items-center gap-2"
-            >
-              <Image
-                src={Logo}
-                alt="Solux Global"
-                width={70}
-                className="h-auto"
-                priority
-              />
-              <h1 className="leading-none lg:text-xl md:text-lg text-base font-semibold font-dm_sans text-primary-foreground">
-                Solux Global
-              </h1>
-            </Link>
-
-            <p className="text-white/70 text-sm md:text-base leading-relaxed">
-              Simplifying medical billing for doctors with accurate, timely, and
-              compliant solutions.
-            </p>
-
-            <div className="space-y-3 mt-2">
-              <Link
-                href={"tel:+13073109666"}
-                className="flex gap-2 items-start group"
-              >
-                <Phone className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                <p className="text-sm text-white/80 group-hover:text-secondary">
-                  +1 (307) 310 9666
-                </p>
-              </Link>
-
-              <Link
-                href="mailto:info@soluxglobal.com"
-                className="flex gap-2 items-start group"
-              >
-                <Mail className="w-5 h-5 text-white flex-shrink-0" />
-                <p className="text-sm text-white/80 group-hover:text-secondary">
-                  info@soluxglobal.com
-                </p>
-              </Link>
-            </div>
-
-            <div className="flex gap-4 mt-5 flex-wrap">
-              <Link
-                href="/"
-                target="_blank"
-                className="bg-blue-600 hover:bg-blue-700 p-2.5 rounded transition-colors"
+    <footer className="bg-[#3b434a] text-white">
+      <div className="px-[100px] py-[72px]">
+        <div className="flex items-start justify-between">
+          {/* LEFT COLUMN */}
+          <div className="flex flex-col justify-between min-h-[300px]">
+            {/* Social Icons */}
+            <div className="flex gap-6">
+              <a
                 aria-label="LinkedIn"
+                href="#"
+                className="opacity-90 hover:opacity-100"
               >
-                <Linkedin className="w-4 h-4 text-white" />
-              </Link>
-
-              <Link
-                href="/"
-                target="_blank"
-                className="bg-gray-600 hover:bg-gray-700 p-2.5 rounded transition-colors"
-                aria-label="Twitter"
+                <Linkedin size={22} />
+              </a>
+              <a
+                aria-label="X"
+                href="#"
+                className="opacity-90 hover:opacity-100"
               >
-                <Twitter className="w-4 h-4 text-white" />
-              </Link>
-
-              <Link
-                href="/"
-                target="_blank"
-                className="bg-blue-600 hover:bg-blue-700 p-2.5 rounded transition-colors"
+                <Twitter size={22} />
+              </a>
+              <a
                 aria-label="Facebook"
+                href="#"
+                className="opacity-90 hover:opacity-100"
               >
-                <Facebook className="w-4 h-4 text-white" />
-              </Link>
-
-              <Link
-                href="/"
-                target="_blank"
-                className="bg-pink-600 hover:bg-pink-700 p-2.5 rounded transition-colors"
+                <Facebook size={22} />
+              </a>
+              <a
                 aria-label="Instagram"
+                href="#"
+                className="opacity-90 hover:opacity-100"
               >
-                <Instagram className="w-4 h-4 text-white" />
-              </Link>
+                <Instagram size={22} />
+              </a>
+            </div>
+
+            {/* Copyright */}
+            <div className=" text-[16px] leading-relaxed opacity-90">
+              <p>© 2025 Polsinelli. Attorney Advertising.</p>
+              <p>Prior results do not guarantee a similar outcome.</p>
             </div>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <h3 className="text-white font-dm_sans font-medium text-xl md:text-2xl">
-              Quick Links
-            </h3>
+          {/* MIDDLE COLUMN */}
+          <nav className="flex flex-col gap-4 text-[18px] leading-tight">
+            <a href="#" className="underline underline-offset-4">
+              Contact Us
+            </a>
+            <a href="#" className="underline underline-offset-4">
+              Subscribe
+            </a>
+            <a href="#" className="underline underline-offset-4">
+              Alumni Network
+            </a>
+            <a href="#" className="underline underline-offset-4">
+              Collaborate Polsinelli
+            </a>
+            <a href="#" className="underline underline-offset-4">
+              Client Payment Portal
+            </a>
+            <a href="#" className="underline underline-offset-4">
+              Disclaimer
+            </a>
+            <a href="#" className="underline underline-offset-4">
+              Cookie Preferences
+            </a>
+            <a href="#" className="underline underline-offset-4">
+              Privacy Notice
+            </a>
+          </nav>
 
-            <ul className="space-y-2">
-              {FooterNavLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-secondary transition-colors text-sm md:text-base flex items-center gap-2 group"
-                  >
-                    <ArrowRight className="w-4 h-4 text-secondary group-hover:translate-x-1 transition-transform" />
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          {/* RIGHT COLUMN */}
+          <div>
+            <button className="border border-white px-10 py-4 text-[18px] tracking-wide hover:bg-white hover:text-[#3b434a] transition-colors">
+              Client Login
+            </button>
           </div>
-
-          <div className="flex flex-col gap-4">
-            <h3 className="text-white font-dm_sans font-medium text-xl md:text-2xl">
-              Our Services
-            </h3>
-
-            <ul className="space-y-2">
-              {FooterServicesLink.map((service) => (
-                <li key={service.name}>
-                  <Link
-                    href={service.link}
-                    className="text-gray-300 hover:text-secondary transition-colors text-sm md:text-base flex items-center gap-2 group"
-                  >
-                    <ArrowRight className="w-4 h-4 text-secondary group-hover:translate-x-1 transition-transform" />
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="flex flex-col gap-4">
-            <h3 className="text-white font-dm_sans font-medium text-xl md:text-2xl">
-              Office Address
-            </h3>
-
-            <div className="space-y-8">
-              <div className="flex items-start gap-2">
-                <MapPin className="w-5 h-5 text-blue-500 mt-0.5" />
-                <p className="text-white/70 text-sm md:text-base leading-relaxed">
-                  30 N Gould St Ste R, Sheridan <br /> WY 82801
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="border-t border-white/10 pt-6 mt-4 text-center">
-          <p className="text-gray-400 text-xs md:text-sm">
-            © Solux Global 2025 | All Rights Reserved
-          </p>
         </div>
       </div>
     </footer>
   );
 }
-
-export default Footer;
