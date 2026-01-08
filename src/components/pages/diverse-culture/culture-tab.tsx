@@ -7,6 +7,7 @@ import OurValues from "@/components/partials/our-values";
 import CultureOverview from "./tabs/overview";
 import NewsTab from "./tabs/news";
 import ResourceGroupsPage from "./tabs/resource";
+import TestimonialTabSection from "./tabs/testimonial";
 
 
 const tabs = [
@@ -66,7 +67,17 @@ export default function CultureTabSection() {
             <div className="h-[1px] w-[1500px]  mx-auto bg-[#d1d5db]" />
           </div>
         )}
-        {activeTab === "testimonial" && <div className="pl-[100px] "></div>}
+        {activeTab === "testimonials" && (
+          <div className=" ">
+            <div>
+              <div className="px-[100px]">
+                <TestimonialTabSection />
+              </div>
+              {/* DIVIDER */}
+              <div className="h-[1px] w-[1500px]  mx-auto bg-[#d1d5db]" />
+            </div>
+          </div>
+        )}
       </div>
       <FirmHighlights />
     </div>
